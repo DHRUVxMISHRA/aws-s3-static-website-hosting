@@ -1,0 +1,156 @@
+# 📖 Project Overview
+
+> **AWS Service:** Amazon S3  
+> **Project:** Static Website Hosting using Amazon S3  
+> **Difficulty:** Beginner → Intermediate  
+> **Estimated Time:** 2–3 Hours
+
+---
+
+## 📑 Table of Contents
+
+- 🎯 Learning Objectives
+- 💡 What is Amazon S3?
+- 📚 Important Terminology
+- 🌍 Real-Life Analogy
+- 🚀 Common Use Cases
+- 🧠 Quick Revision
+
+---
+
+## 🎯 Learning Objectives
+
+In this project, we will cover:
+
+- 🔄 S3 Versioning
+- 🌍 S3 Replication
+- 🔐 Data Encryption
+- 🛡️ S3 Bucket Policies
+- 💾 S3 Storage Classes
+- 📊 Logging & Monitoring
+- 🌐 Static Website Hosting
+- 🚚 AWS Snow Family
+- 🏢 Storage Gateway (Hybrid Cloud)
+
+---
+
+## 💡 What is Amazon S3?
+
+Amazon S3 is an **Object Storage Service**, unlike EBS or EFS which provide block/file storage.
+
+It is designed to store any type of data such as:
+
+- 📄 Documents
+- 🖼️ Images
+- 🎥 Videos
+- 🎵 Audio Files
+- 💾 Backups
+- 📂 Application Files
+- 📦 Logs & Archives
+
+### 🌟 Key Characteristics
+
+| Feature | Description |
+| --- | --- |
+| 📈 Scalability | Virtually unlimited storage |
+| ⚡ Performance | Fast upload & retrieval |
+| 🛡️ Security | IAM, Bucket Policies, Encryption |
+| 🌍 Availability | 99.99% |
+| 💪 Durability | 99.999999999% (11 Nines) |
+| 💰 Pricing | Pay only for what you use |
+
+---
+
+## 📚 Important Terminology
+
+### 🪣 Bucket
+
+A **Bucket** is a container that stores objects.
+
+Think of it like a folder in Google Drive.
+
+```text
+Bucket
+│
+├── image.png
+├── notes.pdf
+├── video.mp4
+└── backup.zip
+```
+
+> 💡 **Without a bucket, objects cannot be stored in S3.**
+
+---
+
+### 📄 Object
+
+An **Object** is the actual file stored inside the bucket.
+
+Examples:
+
+- photo.jpg
+- movie.mp4
+- report.pdf
+- index.html
+
+Every object contains:
+
+```text
+Object
+=
+File
++
+Metadata
++
+Unique Key
+```
+
+---
+
+## 🌍 Real-Life Analogy
+
+```text
+Google Drive
+      ↓
+    Folder
+      ↓
+     Files
+```
+
+is equivalent to
+
+```text
+Amazon S3
+      ↓
+    Bucket
+      ↓
+    Objects
+```
+
+---
+
+## 🚀 Common Use Cases
+
+Companies use Amazon S3 for:
+
+- 🌐 Static Website Hosting
+- 💾 Backup & Disaster Recovery
+- 🖼️ Image & Video Storage
+- 📊 Big Data Analytics
+- 🤖 Machine Learning Datasets
+- 📝 Log Storage
+- 📂 Application Assets
+
+---
+
+## 🧠 Quick Revision
+
+- 📦 **Amazon S3** = Object Storage Service
+- 🪣 **Bucket** = Container
+- 📄 **Object** = File + Metadata
+- 🌍 Accessible from anywhere
+- 💰 Pay only for the storage you use
+
+---
+
+➡️ **Next:** [02 - S3 Introduction](02-s3-introduction.md)
