@@ -1,0 +1,315 @@
+# 🪣 Creating an Amazon S3 Bucket
+
+In this section, we create and configure an Amazon S3 bucket that will be used throughout the project to host our static website and demonstrate various Amazon S3 features.
+
+---
+
+# 🎯 Objective
+
+The goal of this step is to:
+
+- Create a new Amazon S3 bucket
+- Configure the recommended bucket settings
+- Understand the purpose of each configuration option
+- Upload the website files that will later be hosted using Amazon S3
+
+---
+
+# 🛠️ Step 1 — Open Amazon S3
+
+Log in to the **AWS Management Console** and navigate to Amazon S3.
+
+```
+AWS Console
+      ↓
+Search "S3"
+      ↓
+Amazon S3
+      ↓
+Create Bucket
+```
+
+---
+
+# 🛠️ Step 2 — Configure the Bucket
+
+## 🌎 AWS Region
+
+Choose the AWS Region where your bucket will be created.
+
+Example
+
+```
+Asia Pacific (Mumbai)
+ap-south-1
+```
+
+### Why?
+
+Selecting a region close to your users reduces latency and improves application performance.
+
+---
+
+## 🪣 Bucket Type
+
+Choose:
+
+✅ **General Purpose**
+
+This is the recommended bucket type for most workloads including:
+
+- Static Website Hosting
+- Images
+- Videos
+- Documents
+- Application Assets
+- Backups
+
+---
+
+## 🌐 Bucket Name
+
+Every bucket name must be globally unique across all AWS accounts.
+
+Example
+
+```
+❌ mybucket
+
+✅ demo-bucket-dhruv-x
+```
+
+### Bucket Naming Rules
+
+- 3–63 characters
+- Lowercase letters only
+- Numbers allowed
+- Hyphens (-) allowed
+- Periods (.) allowed
+- No spaces
+- No uppercase letters
+
+---
+
+# 🛠️ Step 3 — Object Ownership
+
+Select:
+
+✅ **ACLs Disabled (Recommended)**
+
+### Why?
+
+AWS recommends managing permissions using **IAM Policies** and **Bucket Policies** instead of Access Control Lists (ACLs).
+
+Benefits:
+
+- Simpler permission management
+- Improved security
+- Bucket owner automatically owns every uploaded object
+
+---
+
+# 🛠️ Step 4 — Block Public Access
+
+Leave:
+
+✅ **Block All Public Access**
+
+enabled while creating the bucket.
+
+### Why?
+
+This prevents accidental exposure of your objects to the internet.
+
+> **Note:** For this project, public access will be disabled later because static website hosting requires public read access.
+
+---
+
+# 🛠️ Step 5 — Bucket Versioning
+
+By default,
+
+```
+Versioning = Disabled
+```
+
+Versioning stores multiple versions of the same object.
+
+Example
+
+```
+index.html
+
+↓
+
+Version 1
+
+↓
+
+Version 2
+
+↓
+
+Version 3
+```
+
+Benefits:
+
+- Recover deleted files
+- Restore previous versions
+- Protection against accidental overwrites
+
+Versioning will be covered in detail later in this project.
+
+---
+
+# 🛠️ Step 6 — Tags (Optional)
+
+Tags help organize AWS resources.
+
+Example
+
+```
+Project = AWS Portfolio
+
+Environment = Development
+
+Owner = Dhruv
+```
+
+Tags are commonly used for:
+
+- 💰 Cost allocation
+- 📊 Resource organization
+- 🔍 Resource filtering
+- ⚙️ Automation
+
+---
+
+# 🛠️ Step 7 — Default Encryption
+
+Select:
+
+✅ **SSE-S3**
+
+(Server-Side Encryption with Amazon S3 Managed Keys)
+
+Benefits:
+
+- Automatic encryption
+- No encryption key management
+- AWS manages the encryption keys
+
+---
+
+## 🔑 Bucket Key
+
+Enable:
+
+✅ **Bucket Key**
+
+Bucket Keys reduce AWS KMS request costs when SSE-KMS is used.
+
+Although this project uses SSE-S3, understanding Bucket Keys is useful for AWS certification exams.
+
+---
+
+# 🛠️ Step 8 — Advanced Settings
+
+No additional configuration is required.
+
+Leave all settings as their default values.
+
+---
+
+# 🛠️ Step 9 — Create the Bucket
+
+Click:
+
+**Create Bucket**
+
+AWS creates the bucket successfully.
+
+Example
+
+```
+demo-bucket-dhruv-x
+```
+
+---
+
+# 📤 Upload Website Files
+
+Open the bucket and upload your website files.
+
+```
+Upload
+
+↓
+
+Add Files
+
+↓
+
+Select Website Files
+
+↓
+
+Upload
+```
+
+Files uploaded for this project:
+
+- 📄 index.html
+- 📄 error.html
+- 📁 assets/
+- 📁 images/
+- 📄 README.md
+- 📄 LICENSE.md
+
+---
+
+# 📂 Final Bucket Structure
+
+```
+demo-bucket-dhruv-x
+
+├── index.html
+├── error.html
+├── assets/
+├── images/
+├── README.md
+└── LICENSE.md
+```
+
+---
+
+# ✅ Best Practices
+
+- Use meaningful bucket names.
+- Keep bucket names globally unique.
+- Choose the AWS Region nearest to your users.
+- Enable encryption for every bucket.
+- Leave Block Public Access enabled unless public access is required.
+- Enable Versioning for production workloads.
+- Organize objects using logical folder prefixes.
+
+---
+
+# 💡 What We Accomplished
+
+At this stage, we have successfully:
+
+- ✅ Created an Amazon S3 bucket
+- ✅ Configured recommended bucket settings
+- ✅ Enabled server-side encryption
+- ✅ Uploaded the website files
+- ✅ Prepared the bucket for static website hosting
+
+The bucket is now ready for the next stage of the project.
+
+---
+
+## 📖 Next Section
+
+➡️ **Next:** [03 - S3 Key Points](03-s3-key-points.md)
